@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Ethical Decision Machine</title>
+    <link rel="icon" type="image/png" href="philosopher.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero" id="top">
+      <div class="hero-inner">
+        <p class="eyebrow">Morality, Law & Philosophy</p>
+        <h1>The Ethical Decision Machine</h1>
+        <p class="about-project">
+          This project reflects questions and ideas about morality, law,
+          justice, and human responsibility.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#explorer">Start Exploring</a>
+        </div>
+      </div>
+      <div class="scale-wrap" aria-hidden="true">
+        <div class="scale-symbol">⚖️</div>
+        <p>Balance, Duty, and Consequences</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="explorer" id="explorer" aria-labelledby="explorer-title">
+        <div class="section-head">
+          <h2 id="explorer-title">Explore Moral Dilemmas</h2>
+          <p>
+            Select a dilemma, choose a response, and compare how different
+            ethical frameworks might interpret your decision.
+          </p>
+        </div>
+
+        <div class="explorer-layout">
+          <aside class="dilemma-list-wrap" aria-label="Dilemma options">
+            <h3>Dilemmas</h3>
+            <div id="dilemma-list" class="dilemma-list"></div>
+          </aside>
+
+          <article
+            class="decision-panel"
+            id="decision-panel"
+            aria-live="polite"
+          >
+            <div class="placeholder" id="placeholder">
+              <p class="placeholder-icon">🧠</p>
+              <h3>Choose a Dilemma to Begin</h3>
+              <p>
+                Each case raises the same question in a new form: what do we owe
+                one another?
+              </p>
+            </div>
+
+            <div class="dilemma-detail hidden" id="dilemma-detail">
+              <p class="detail-tag" id="detail-tag"></p>
+              <h3 id="detail-title"></h3>
+              <p id="detail-scenario" class="detail-scenario"></p>
+              <h4 class="question">What would you do?</h4>
+              <div id="choice-buttons" class="choice-buttons"></div>
+
+              <section
+                id="analysis-block"
+                class="analysis-block hidden"
+                aria-live="polite"
+              >
+                <h4>Ethical Perspectives</h4>
+                <div id="analysis-cards" class="analysis-cards"></div>
+
+                <div class="meter-wrap">
+                  <h4>Ethical Reflection Meter</h4>
+                  <div id="meter-bars" class="meter-bars"></div>
+                </div>
+
+                <p class="closing-reflection" id="closing-reflection">
+                  This dilemma does not have an easy answer. Different ethical
+                  theories highlight different responsibilities.
+                </p>
+              </section>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="professor-note" aria-labelledby="professor-note-title">
+        <h2 id="professor-note-title">Professor Thank You</h2>
+        <p>
+          This project was created as a small thank-you for a class that pushed
+          me to think more carefully about morality, law, justice, and human
+          responsibility. Thank you for teaching this semester and for creating
+          room for thoughtful discussion.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Created by Nauryzbek Berdi</p>
+      <p>Morality, Law & Philosophy</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

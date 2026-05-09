@@ -1,0 +1,469 @@
+:root {
+  --bg: #171311;
+  --panel: #221a17;
+  --panel-soft: #2b211d;
+  --text: #f1e6d8;
+  --muted: #c8b8a5;
+  --accent: #d8a56a;
+  --accent-strong: #f2c18a;
+  --line: #4a3a31;
+  --good: #7ccf98;
+  --shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+  --radius-lg: 18px;
+  --radius-md: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family:
+    "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", serif;
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(216, 165, 106, 0.08),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(242, 193, 138, 0.08),
+      transparent 35%
+    ),
+    var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+p {
+  margin: 0;
+}
+
+.hero {
+  min-height: 88vh;
+  padding: 4.5rem 1.25rem 3rem;
+  max-width: 1150px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  grid-template-columns: 1.2fr 0.8fr;
+}
+
+.hero-inner {
+  background: linear-gradient(
+    155deg,
+    rgba(43, 33, 29, 0.94),
+    rgba(23, 19, 17, 0.94)
+  );
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem;
+  box-shadow: var(--shadow);
+}
+
+.eyebrow {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.78rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  margin-bottom: 0.8rem;
+}
+
+.about-project {
+  max-width: 58ch;
+  color: var(--muted);
+  margin-bottom: 1.7rem;
+}
+
+.btn {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.72rem 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border: 1px solid transparent;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.btn-primary {
+  color: #1c130f;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  box-shadow: 0 10px 22px rgba(216, 165, 106, 0.28);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.scale-wrap {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  min-height: 210px;
+  background: rgba(34, 26, 23, 0.75);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  box-shadow: var(--shadow);
+  padding: 1.4rem;
+}
+
+.scale-symbol {
+  font-size: clamp(3rem, 8vw, 5rem);
+  display: inline-block;
+  transform-origin: 50% 16%;
+  animation: sway 2.6s ease-in-out infinite;
+}
+
+.scale-wrap p {
+  margin-top: 0.5rem;
+  color: var(--muted);
+}
+
+@keyframes sway {
+  0%,
+  100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+main {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 1.25rem 3rem;
+}
+
+.explorer,
+.professor-note {
+  background: linear-gradient(
+    160deg,
+    rgba(34, 26, 23, 0.94),
+    rgba(23, 19, 17, 0.96)
+  );
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.explorer {
+  padding: 2rem;
+}
+
+.section-head h2 {
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  margin-bottom: 0.55rem;
+}
+
+.section-head p {
+  color: var(--muted);
+  max-width: 70ch;
+}
+
+.explorer-layout {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 330px 1fr;
+  gap: 1.3rem;
+}
+
+.dilemma-list-wrap,
+.decision-panel,
+.professor-note {
+  background: rgba(23, 19, 17, 0.78);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+}
+
+.dilemma-list-wrap {
+  padding: 1rem;
+}
+
+.dilemma-list-wrap h3 {
+  margin-bottom: 0.8rem;
+  color: var(--accent);
+}
+
+.dilemma-list {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.dilemma-card {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel);
+  color: var(--text);
+  text-align: left;
+  padding: 0.9rem;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.dilemma-card strong {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.dilemma-card span {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.dilemma-card:hover,
+.dilemma-card.active {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  background: var(--panel-soft);
+}
+
+.decision-panel {
+  padding: 1.2rem;
+}
+
+.placeholder {
+  min-height: 380px;
+  display: grid;
+  place-content: center;
+  gap: 0.5rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+.placeholder-icon {
+  font-size: 2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.detail-tag {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  margin-bottom: 0.65rem;
+}
+
+#detail-title {
+  font-size: clamp(1.35rem, 2.6vw, 1.8rem);
+  margin-bottom: 0.9rem;
+}
+
+.detail-scenario {
+  color: var(--muted);
+  margin-bottom: 1.2rem;
+}
+
+.question {
+  margin-bottom: 0.8rem;
+}
+
+.choice-buttons {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.choice-btn {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 0.7rem 0.8rem;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.choice-btn:hover,
+.choice-btn.selected {
+  border-color: var(--accent);
+  background: var(--panel-soft);
+  transform: translateX(2px);
+}
+
+.analysis-block {
+  margin-top: 1.2rem;
+  border-top: 1px solid var(--line);
+  padding-top: 1.15rem;
+}
+
+.analysis-cards {
+  margin-top: 0.85rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 0.7rem;
+}
+
+.analysis-card {
+  background: rgba(43, 33, 29, 0.85);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.8rem;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: reveal 0.45s ease forwards;
+}
+
+.analysis-card h5 {
+  margin: 0 0 0.45rem;
+  font-size: 0.98rem;
+  color: var(--accent-strong);
+}
+
+.analysis-card p {
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.meter-wrap {
+  margin-top: 1rem;
+}
+
+.meter-bars {
+  margin-top: 0.7rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.meter-row {
+  display: grid;
+  grid-template-columns: 110px 1fr 42px;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.meter-label,
+.meter-score {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.meter-track {
+  height: 9px;
+  border-radius: 999px;
+  background: #3b2d26;
+  overflow: hidden;
+}
+
+.meter-fill {
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--accent), var(--good));
+  transition: width 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.closing-reflection {
+  margin-top: 1rem;
+  padding: 0.85rem;
+  border-left: 3px solid var(--accent);
+  background: rgba(216, 165, 106, 0.08);
+  color: var(--muted);
+  border-radius: 6px;
+}
+
+.professor-note {
+  margin-top: 1.5rem;
+  padding: 2rem;
+}
+
+.professor-note h2 {
+  margin-bottom: 0.8rem;
+}
+
+.professor-note p {
+  color: var(--muted);
+  max-width: 78ch;
+}
+
+footer {
+  max-width: 1150px;
+  margin: 1.2rem auto 2.2rem;
+  padding: 0 1.25rem;
+  color: var(--muted);
+  display: flex;
+  gap: 0.8rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 980px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .explorer-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .analysis-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero,
+  main,
+  footer {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+  }
+
+  .hero-inner,
+  .explorer,
+  .professor-note {
+    padding: 1.2rem;
+  }
+
+  .meter-row {
+    grid-template-columns: 90px 1fr 36px;
+  }
+}
